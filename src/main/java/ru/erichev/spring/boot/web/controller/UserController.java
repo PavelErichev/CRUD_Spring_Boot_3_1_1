@@ -11,7 +11,6 @@ import ru.erichev.spring.boot.web.service.UserService;
 import java.util.List;
 
 @Controller
-//@RequestMapping
 public class UserController implements ErrorController {
     private final UserService userService;
 
@@ -40,13 +39,13 @@ public class UserController implements ErrorController {
         return "redirect:/users";
     }
 
-    @DeleteMapping("/user-delete/{id}")              //@GetMapping("user-delete/{id}")
+    @DeleteMapping("/user-delete/{id}")
     public String deleteUser(@PathVariable("id") long id) {
         userService.deleteUser(id);
         return "redirect:/users";
     }
 
-    @GetMapping ("/user-update/{id}")             //@GetMapping("/user-update/{id}")
+    @GetMapping ("/user-update/{id}")
     public String updateUserForm(@PathVariable("id") long id, Model model) {
         User user = userService.getUser(id);
         model.addAttribute("user",user);

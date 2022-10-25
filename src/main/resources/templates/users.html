@@ -23,7 +23,6 @@
             <td th:text="${user.firstName}"></td>
             <td th:text="${user.lastName}"></td>
             <td th:text="${user.userName}"></td>
-            <!--<td><a th:href="@{user-update/{id}(id=${user.id})}">Update</a></td>-->
             <td><form action="#" th:action="@{user-update/{id}(id=${user.id})}" th:method="get">
                 <input type="submit" value="Update"/>
             </form></td>
@@ -37,6 +36,5 @@
 <td><form action="#" th:action="@{user-create}" th:method="get">
     <input type="submit" value="Add User"/>
 </form></td>
-<!--<a th:href="@{user-create}">Add</a>-->
 </body>
 </html>

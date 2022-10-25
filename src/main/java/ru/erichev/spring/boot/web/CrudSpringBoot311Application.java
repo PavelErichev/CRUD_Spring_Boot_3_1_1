@@ -8,6 +8,6 @@ public class CrudSpringBoot311Application {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CrudSpringBoot311Application.class, args);
-	}
 
+	}
 }
